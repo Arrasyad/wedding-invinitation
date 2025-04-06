@@ -1,0 +1,1001 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+  overflow-x: hidden;
+  background-color: #191f1b;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+}
+
+.btn {
+  padding: 8px 15px;
+  background-color: #4a8c5e;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  background-color: #3a6d4a;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #4a8c5e;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #4a8c5e;
+  margin: 10px auto 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Opening Section */
+.opening-section {
+  height: 100vh;
+  width: 100%;
+  background-image: url(photo/opening.webp);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.opening-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.opening-content {
+  text-align: center;
+  color: white;
+  z-index: 1;
+  padding: 20px;
+  max-width: 800px;
+}
+
+.opening-content h1 {
+  font-size: 36px;
+  margin-bottom: 5px;
+  animation: fadeInDown 1s ease;
+}
+
+.opening-content p {
+  font-size: 12px;
+  margin-bottom: 500px;
+  animation: fadeInUp 1s ease;
+}
+
+.open-invitation .btn {
+  animation: fadeIn 1.5s ease;
+}
+
+/* Invitation Container */
+.invitation-container {
+  max-width: 480px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: 0 0 30px rgba(0 0 0 / 61%);
+  overflow: hidden;
+}
+
+/* Couple Section */
+.couple-section {
+  height: 100vh;
+  width: 100%;
+  background-image: url(photo/header.webp);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.couple-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.couple-content {
+  z-index: 1;
+  padding: 20px;
+  max-width: 800px;
+}
+
+.couple-content h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease;
+}
+
+.couple-content h1 span {
+  font-size: 40px;
+  color: #4a8c5e;
+  font-weight: 400;
+}
+
+.couple-content p {
+  font-size: 15px;
+  margin-bottom: 0px;
+  animation: fadeInUp 1s ease;
+}
+
+.wedding-date {
+  font-size: 24px;
+  margin: 10px 0;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.audio-control {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+#audio-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: rgba(179, 184, 180, 0.39);
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#audio-btn:hover {
+  background-color: rgba(46, 90, 59, 0.39);
+  transform: scale(1.1);
+}
+
+#audio-btn i {
+  font-size: 13px;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+  cursor: pointer;
+}
+
+.scroll-down i {
+  font-size: 24px;
+  color: white;
+}
+
+/* Bride & Groom Section */
+.bride-groom-section {
+  padding: 40px 20px;
+  background-color: white;
+}
+
+.couple-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Islamic Message Section */
+.islamic-message-section {
+  padding: 40px 20px;
+  background-color: #f5f9f6;
+  text-align: center;
+}
+
+.islamic-message {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.islamic-message-section .islamic-message .salam {
+  font-size: 13px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.islamic-message p {
+  margin-bottom: 0px;
+  color: #4a8c5e;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Quran Verse Section */
+.quran-verse-section {
+  padding: 40px 20px;
+  background-color: white;
+  text-align: center;
+}
+
+.quran-verse {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: #f5f9f6;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.verse-text {
+  font-style: italic;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #4a8c5e;
+  margin-bottom: 10px;
+}
+
+.verse-reference {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4a8c5e;
+}
+
+@media (min-width: 768px) {
+  .islamic-message p {
+    font-size: 18px;
+  }
+  
+  .verse-text {
+    font-size: 18px;
+  }
+}
+
+.bride,
+.groom {
+  text-align: center;
+}
+
+.profile-img {
+  width: 180px;
+  height: 210px;
+  border-radius: 5%;
+  margin: 20px auto;
+  background-size: cover;
+  background-position: center;
+  box-shadow: rgb(32 109 56) 0px 20px 30px -10px;
+}
+
+.bride h3,
+.groom h3 {
+  font-size: 24px;
+  margin: 5px 20px;
+  color: #4a8c5e;
+}
+
+.bride p, .groom p {
+  font-size: 13px;
+  color: #666;
+  margin: 0px 13px;
+}
+
+.social-link {
+  font-size: 13px;
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #4a8c5e;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #3a6d4a;
+}
+
+.social-link i {
+  margin-right: 5px;
+}
+
+/* Save the Date Section */
+.save-date-section {
+  padding: 60px 20px;
+  background-color: #f5f9f6;
+}
+
+.event-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.event-card h3 {
+  color: #4a8c5e;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.event-card p {
+  margin-bottom: 8px;
+  color: #666;
+}
+
+.map-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #4a8c5e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.map-btn i {
+  margin-right: 8px;
+}
+
+.map-btn:hover {
+  background-color: #3a6d4a;
+}
+
+/* Love Story Section - Enhanced */
+.love-story-section {
+  padding: 80px 20px;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.love-story-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(74, 140, 94, 0.03) 0%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  z-index: 0;
+}
+
+.section-title {
+  position: relative;
+  z-index: 1;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 50px auto 0;
+  padding: 0 20px;
+}
+
+.timeline-item {
+  padding: 20px 0;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-item-container {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+}
+
+.timeline-item:nth-child(odd) .timeline-item-container {
+  justify-content: flex-end;
+}
+
+.timeline-content-wrapper {
+  width: calc(50% - 40px);
+  position: relative;
+}
+
+.timeline-item:nth-child(odd) .timeline-content-wrapper {
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) .timeline-content-wrapper {
+  text-align: left;
+}
+
+.timeline-marker {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #4a8c5e;
+  border-radius: 50%;
+  border: 4px solid #f5f9f6;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.timeline-item:nth-child(odd) .timeline-marker {
+  left: -10px;
+}
+
+.timeline-item:nth-child(even) .timeline-marker {
+  right: -10px;
+}
+
+.timeline-img {
+  width: 100%;
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+}
+
+.timeline-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(19 76 37 / 53%) 0%,
+    rgba(43, 43, 43, 0.096) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.timeline-img:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-img:hover::after {
+  opacity: 1;
+}
+
+.timeline-content {
+  height: 220px;
+  width: 270px;
+  padding: 25px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: rgb(32 109 56) 0px 20px 30px -10px;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.timeline-content:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+  border-color: rgba(74, 140, 94, 0.2);
+}
+
+.timeline-content h3 {
+  color: #4a8c5e;
+  margin-bottom: 12px;
+  font-size: 22px;
+  position: relative;
+  display: inline-block;
+}
+
+.timeline-content h3::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #4a8c5e;
+  transition: width 0.3s ease;
+  -webkit-transition: width 0.3s ease;
+  -moz-transition: width 0.3s ease;
+  -ms-transition: width 0.3s ease;
+  -o-transition: width 0.3s ease;
+}
+
+.timeline-item:nth-child(even) .timeline-content h3::after {
+  left: auto;
+  right: 0;
+}
+
+.timeline-content:hover h3::after {
+  width: 60px;
+}
+
+.timeline-date {
+  display: inline-block;
+  background-color: #4a8c5e;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.timeline-content p {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-content-wrapper {
+    width: calc(100% - 60px);
+    margin-left: 40px;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content-wrapper,
+  .timeline-item:nth-child(even) .timeline-content-wrapper {
+    text-align: left;
+  }
+
+  .timeline-marker {
+    left: 10px !important;
+    right: auto !important;
+  }
+
+  .timeline-content h3::after {
+    left: 0 !important;
+    right: auto !important;
+  }
+}
+
+/* Animation for timeline items */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Gallery Section */
+.gallery-section {
+  padding: 60px 20px;
+  background-color: #f5f9f6;
+}
+
+.masonry-gallery {
+  columns: 2;
+  column-gap: 15px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Gift Section */
+.gift-section {
+  padding: 60px 20px;
+  background-color: white;
+}
+
+.poetic-text {
+  font-style: italic;
+  color: #4a8c5e;
+  line-height: 1.6;
+  font-size: 13px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.bank-account {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.bank-card {
+  background-color: #f5f9f6;
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.bank-logo {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bank-logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.bank-card h3 {
+  color: #4a8c5e;
+  margin-bottom: 10px;
+}
+
+.bank-card p {
+  color: #666;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.copy-btn {
+  padding: 8px 20px;
+  background-color: #4a8c5e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.copy-btn:hover {
+  background-color: #3a6d4a;
+}
+
+/* Footer Section */
+.footer-section {
+  padding: 40px 20px 5px;
+  background-color: #191f1b;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.footer-section p {
+  margin-bottom: 10px;
+  font-size: 10px;
+}
+.footer-section h1 {
+  font-family: "Playfair Display";
+  font-size: 15px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.footer-section p:last-child {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.footer-section img {
+  height: 70%;
+  width: 70px;
+  margin-bottom: 20px;
+}
+
+.by {
+  display: flex;           /* Menggunakan flexbox untuk layout */
+  justify-content: space-between; /* Pusatkan horizontal */
+  align-items: center;
+  gap: 2rem;               /* Jarak antara kedua div */
+  padding: 7px 40px;           /* Ruang padding di sekitar footer */
+  background-color: #191f1b; /* Warna background opsional */
+  font-family: Arial, sans-serif; /* Jenis font */
+}
+
+.musicBy, .madeBy {
+  text-align: center;      /* Pusatkan teks dalam div */
+  flex: 0 0 auto;
+}
+
+.musicBy h1, .madeBy h1 {
+  font-size: 0.5rem;
+  margin-bottom: 0.2rem;
+  color: #cf95ff;
+}
+
+.musicBy p, .madeBy p {
+  font-size: 0.5rem;        /* Ukuran font untuk paragraf */
+  color: #666;            /* Warna teks paragraf */
+}
+
+.by .watermark {
+  flex: 0 0 auto;
+}
+
+.by .watermark img {
+  margin-top: 0.2rem;
+  height: 24px;
+  width: 24px;
+}
+
+.madeBy a {
+  color: #666;         /* Warna link */
+  text-decoration: none;  /* Hilangkan underline */
+}
+
+.madeBy a:hover {
+  text-decoration: underline; /* Underline saat hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  40% {
+    transform: translateY(-20px) translateX(-50%);
+  }
+  60% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 32px;
+  }
+
+  .couple-content h1 {
+    font-size: 60px;
+  }
+
+  .wedding-date {
+    font-size: 28px;
+  }
+
+  .couple-container {
+    flex-direction: row;
+    gap: 0px;
+  }
+
+  .bride,
+  .groom {
+    flex: 1;
+  }
+
+  .event-card {
+    max-width: 600px;
+    margin: 0 auto 20px;
+  }
+
+  .timeline-item {
+    padding: 10px 30px;
+  }
+
+  .timeline-item:nth-child(odd) {
+    padding-right: 70px;
+  }
+
+  .timeline-item:nth-child(even) {
+    padding-left: 70px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .invitation-container {
+    margin: 20px auto;
+  }
+}
+
+/* Tambahkan di style.css */
+/* Animation Classes */
+.zoom-out {
+  opacity: 0;
+  transform: scale(1.2);
+  transition: all 0.8s ease;
+}
+
+.zoom-out.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.slide-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s ease;
+}
+
+.slide-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.8s ease;
+}
+
+.slide-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.slide-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in {
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.fade-in.active {
+  opacity: 1;
+}
+
+.gallery-item {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.5s ease;
+}
+
+.gallery-item.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Delay for gallery items */
+.gallery-item:nth-child(1) { transition-delay: 0.1s; }
+.gallery-item:nth-child(2) { transition-delay: 0.2s; }
+.gallery-item:nth-child(3) { transition-delay: 0.3s; }
+.gallery-item:nth-child(4) { transition-delay: 0.4s; }
+.gallery-item:nth-child(5) { transition-delay: 0.5s; }
+.gallery-item:nth-child(6) { transition-delay: 0.6s; }
+.gallery-item:nth-child(7) { transition-delay: 0.7s; }
+
+/* Delay for bank cards */
+.bank-card:nth-child(1) { transition-delay: 0.2s; }
+.bank-card:nth-child(2) { transition-delay: 0.4s; }
+
+/* Tambahkan di style.css */
+.timeline-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delay untuk timeline items */
+.timeline-item:nth-child(1) { transition-delay: 0.2s; }
+.timeline-item:nth-child(2) { transition-delay: 0.4s; }
+.timeline-item:nth-child(3) { transition-delay: 0.6s; }
